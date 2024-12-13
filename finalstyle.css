@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables CSS */
+:root {
+  --primary-color: #f1683a;
+  --primary-color-hover: #f1683a;
+  --background-color: #f8f9fa;
+  --text-color: #555;
+  --card-bg-color: white;
+  --card-border-color: #ddd;
+  --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --header-bg-color: #393b3e;
+  --header-text-color: #f1683a;
+}
+
+/* Reset básico para un mejor diseño */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  /* background-image: url('image/diseño1.jpg'); */
+}
+
+/* Barra superior */
+.header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Contenedor principal */
+.container {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Estilización de las tarjetas (cards) */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  padding: 15px;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  
+}
+
+.card p {
+    font-size: 1.0em; /* Tamaño de fuente */
+    color: var(--text-color); /* Color del texto */
+    line-height: 1.4; /* Espaciado entre líneas */
+    flex-grow: 1; /* Permitir flexibilidad de crecimiento */
+    text-align: justify; /* Alinear texto a la izquierda */
+    margin: 5px 0; /* Margen para separación */
+  }
+
+.card button {
+  margin-top: 5px;
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
